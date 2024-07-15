@@ -58,8 +58,8 @@ async function checkPaymentStatus(orderId){
     const headers = {
         'accept': 'application/json',
         'x-api-version': '2023-08-01',
-        'x-client-id': API_KEY,
-        'x-client-secret': CASHFREE_CLIENT_ID
+        'x-client-id': process.env.API_KEY,
+        'x-client-secret': process.env.CASHFREE_CLIENT_ID
       };
 
     try {
