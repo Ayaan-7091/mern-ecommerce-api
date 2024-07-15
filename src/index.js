@@ -7,11 +7,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors({
-    origin:["https://wearus-api.vercel.app"],
-    methods:[POST,GET],
-    credentials:true
-}))
+app.use(cors())
 
 app.get("/",(req,res)=>{
     return res.status(200).send({message:"WELCOME TO WEARUS",status:true})
