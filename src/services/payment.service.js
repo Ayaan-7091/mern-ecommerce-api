@@ -21,7 +21,7 @@ async function initiatePaymentGateway(orderId){
         customer_email:order.user.email,
         customer_phone:"9924253037"
     }
-    const return_url = "http://localhost:3000/account/order"
+    const return_url = "https://wearus.vercel.app/account/order"
 
     
     Cashfree.XClientId = process.env.CASHFREE_CLIENT_ID;
