@@ -58,8 +58,8 @@ async function checkPaymentStatus(orderId){
     const headers = {
         'accept': 'application/json',
         'x-api-version': '2023-08-01',
-        'x-client-id': process.env.API_KEY,
-        'x-client-secret': process.env.CASHFREE_CLIENT_ID
+        'x-client-id':process.env.CASHFREE_CLIENT_ID,
+        'x-client-secret': process.env.API_KEY
       };
 
     try {
@@ -75,6 +75,9 @@ async function checkPaymentStatus(orderId){
     } catch (error) {
         console.error('Error: ',error)
     }
+    console.log("checking payment stauts ",data
+
+    )
 }
 
 module.exports = {initiatePaymentGateway,checkPaymentStatus}

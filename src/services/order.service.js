@@ -130,6 +130,7 @@ async function userOrderHistory(userId){
         for(let order of orders){
         if(order.orderStatus=='PENDING'){
           const data = await checkPaymentStatus(order.paymentDetails.paymentId)
+          console.log("check data",data)
           console.log(order.paymentDetails.paymentId)
           order.paymentDetails.paymentStatus=data.order_status
           if(order.paymentDetails.paymentStatus=="PAID"){
